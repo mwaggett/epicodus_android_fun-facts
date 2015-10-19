@@ -17,10 +17,8 @@ public class FactBook {
             "Mammoths still walked the earth when the Great Pyramid was being built." };
 
     public String getFact() {
-        String fact = "";
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(mFacts.length);
-        fact = mFacts[randomNumber];
-        return fact;
+        return mFacts[randomNumber];
     }
 }
