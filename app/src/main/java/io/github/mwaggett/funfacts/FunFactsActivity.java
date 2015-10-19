@@ -3,16 +3,20 @@ package io.github.mwaggett.funfacts;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class FunFactsActivity extends AppCompatActivity {
+
+    public static final String TAG = FunFactsActivity.class.getSimpleName();
 
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
@@ -39,5 +43,9 @@ public class FunFactsActivity extends AppCompatActivity {
             }
         };
         showFactButton.setOnClickListener(listener);
+
+        //A couple troubleshooting methods:
+        //Toast.makeText(this, "Yay! Our Activity was created!", Toast.LENGTH_LONG).show();
+        //Log.d(TAG, "We're logging from the onCreate() method!");
     }
 }
